@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de productos originales de Microsoft</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Botón para alternar tema -->
+    <div class="theme-toggle" onclick="toggleTheme()" ></div>
+    
+    <!-- Icono del carrito de compras -->
+<!-- Icono del carrito de compras -->
+<div class="cart-icon" onclick="toggleCart()">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="cart-svg">
+        <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm0 1c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm10-1c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zm0 1c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM4.42 4L3 2H1v2h2l3.6 7.59-1.35 2.44c-.09.16-.15.35-.15.56 0 .55.45 1 1 1h12v-2H7.42c-.05-.1-.08-.2-.1-.31L8.1 14h9.55c.75 0 1.41-.41 1.75-1.03L22.3 6.4c.12-.23.2-.48.2-.75 0-.83-.67-1.5-1.5-1.5H5.21L4.42 4zm2.4 2h13l-3.6 7H8.53L6.82 6z"/>
+    </svg>
+    <span id="cart-count" class="cart-count">0</span>
+</div>
+
+
+    <header>
+        <div class="header-content">
+            <img src="imagenes/image.png" alt="Distribuidora Carjiz Logo">
+            <div>
+                <h1>Venta de productos originales de Microsoft</h1>
+                <p>Obtén tus licencias de Microsoft de forma segura y rápida</p>
+                <p id="visit-counter">Visitas: Cargando...</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Contenedor de productos -->
+        <section class="container">
+            <div class="product" onclick="addToCart('Microsoft Office 365', 1600)">
+                <img src="imagenes/office.png" alt="Microsoft Office 365">
+                <h2>Microsoft Office 365</h2>
+                <p>Incluye Word, Excel, PowerPoint, y más. Ideal para estudiantes y profesionales.</p>
+                <p class="price">L1,600.00</p>
+                <button>Agregar al carrito</button>
+            </div>
+
+            <div class="product" onclick="addToCart('Microsoft Windows 11 Pro', 199.99)">
+                <img src="imagenes/windows11.png" alt="Microsoft Windows 11 Pro">
+                <h2>Microsoft Windows 11 Pro</h2>
+                <p>Actualiza tu PC con las últimas funciones y seguridad.</p>
+                <p class="price">$199.99</p>
+                <button>Agregar al carrito</button>
+            </div>
+
+            <div class="product" onclick="addToCart('Microsoft Visual Studio', 499.99)">
+                <img src="imagenes/server.png" alt="Microsoft Visual Studio">
+                <h2>Microsoft Visual Studio</h2>
+                <p>Desarrolla software con el entorno líder en desarrollo.</p>
+                <p class="price">$499.99</p>
+                <button>Agregar al carrito</button>
+            </div>
+        </section>
+
+        <!-- Botón para ir a la página de cotización -->
+        <section class="quotation-button">
+            <h2>¿Necesitas una cotización?</h2>
+            <p>Puedes solicitarnos una cotización detallada para cualquier producto que desees.</p>
+            <a href="cotizacion.html" class="button">Solicitar Cotización</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Distribuidora Carjiz. Todos los derechos reservados. | 
+            <a href="#">Política de privacidad</a>
+        </p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

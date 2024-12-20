@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Cotización</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Botón para alternar tema -->
+    <div class="theme-toggle" onclick="toggleTheme()" title="Toggle Theme Mode">🌙</div>
+    
+    <header>
+        <div class="header-content">
+            <img src="imagenes/image.png" alt="Distribuidora Carjiz Logo">
+            <div>
+                <h1>Solicita tu Cotización</h1>
+                <p>Completa el formulario y nos pondremos en contacto contigo.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Formulario de cotización -->
+        <section class="quotation">
+            <h2>Solicita tu Cotización</h2>
+            <form id="quotation-form">
+                <input type="text" id="name" placeholder="Tu nombre" required>
+                <input type="email" id="email" placeholder="Tu correo electrónico" required>
+                <textarea id="products" placeholder="Productos que deseas cotizar" required></textarea>
+                <button type="submit">Enviar Cotización</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Distribuidora Carjiz. Todos los derechos reservados. | 
+            <a href="index.html">Volver al inicio</a>
+        </p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
