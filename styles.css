@@ -1,4 +1,4 @@
-/* Responsividad general */
+/* Estilo moderno y claro con animaciones continuas */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -9,189 +9,211 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Contenedor principal responsivo */
+/* HEADER */
+header {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Cambiamos para manejar columnas en móviles */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease-in-out; /* Animación inicial */
+    flex-wrap: wrap; /* Acomoda elementos en columnas en pantallas pequeñas */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Acomoda logo y texto en pantallas pequeñas */
+    justify-content: center;
+    text-align: center; /* Centra el texto en pantallas pequeñas */
+}
+
+header img {
+    width: 80px; /* Ajustamos tamaño */
+    height: auto;
+    transform: scale(1);
+    animation: pulse 2s infinite; /* Imagen con animación persistente */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: transparent;
+    background: linear-gradient(90deg, #0078d7, #00ffcc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    animation: gradientShift 3s infinite linear; /* Gradiente en movimiento */
+    letter-spacing: 2px;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* CONTENEDOR */
 .container {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ajusta productos automáticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta productos automáticamente */
     gap: 1.5rem;
 }
 
-/* Encabezado */
-header {
+/* PRODUCTOS */
+.product {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
     text-align: center;
-    padding: 1rem;
-}
-
-.header-content {
-    display: flex;
-    flex-direction: column; /* Coloca logo y texto en columna para pantallas pequeñas */
-    align-items: center;
-    gap: 1rem;
-}
-
-header img {
-    width: 80px; /* Tamaño ajustado */
-    height: auto;
-}
-
-header h1 {
-    font-size: 1.8rem; /* Ajustar tamaño en móviles */
-}
-
-/* Icono del carrito responsivo */
-.cart-icon {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    background-color: #0078d7;
-    color: #fff;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s ease-in-out, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    animation: float 5s infinite ease-in-out; /* Movimiento continuo */
 }
 
-.cart-svg {
-    width: 24px; /* Reducido para móviles */
-    height: 24px;
+.product:hover {
+    transform: scale(1.05); /* Crece ligeramente al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.cart-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background: red;
-    color: white;
-    border-radius: 50%;
-    font-size: 0.8rem;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    animation: floatImage 4s infinite ease-in-out; /* Imagen flotante */
 }
 
-/* Botón para solicitar cotización */
-.quotation-button {
-    text-align: center;
-    padding: 1rem;
+.product h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+    color: #0078d7;
 }
 
-.quotation-button .button {
+.product p {
+    margin: 0 0 1rem;
+    color: #555;
+}
+
+.product .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #ff5722;
+}
+
+.product button {
     background-color: #0078d7;
-    color: white;
-    padding: 0.8rem 1.5rem;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.2rem;
     border-radius: 8px;
     font-size: 1rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.quotation-button .button:hover {
-    background-color: #005bb5;
-}
-
-/* Blog y comentarios */
-.blog textarea {
-    width: 100%;
-    height: 100px;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-}
-
-/* Formulario de cotización */
-.quotation form {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-.quotation input, .quotation textarea {
-    font-size: 1rem;
-    padding: 0.7rem;
-    margin-bottom: 1rem;
-    width: 100%;
-}
-
-.quotation button {
-    font-size: 1rem;
-    padding: 0.7rem 1.5rem;
-    background-color: #0078d7;
-    color: white;
-    border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
 }
 
-.quotation button:hover {
+.product button:hover {
     background-color: #005bb5;
+    transform: scale(1.1); /* Crece un poco al pasar el mouse */
 }
 
-/* Media Queries para pantallas pequeñas */
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo transparente */
+    color: #ffffff;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out; /* Animación inicial */
+}
+
+footer a {
+    color: #0078d7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #005bb5;
+}
+
+/* RESPONSIVIDAD */
 @media (max-width: 768px) {
-    .cart-icon {
-        width: 45px;
-        height: 45px;
+    /* Header y logo */
+    header {
+        padding: 1rem;
     }
 
-    .cart-svg {
-        width: 20px;
-        height: 20px;
-    }
-
-    .cart-count {
-        width: 16px;
-        height: 16px;
-        font-size: 0.7rem;
-    }
-
-    .header-content {
-        text-align: center;
+    header img {
+        width: 70px;
     }
 
     header h1 {
         font-size: 1.5rem;
     }
 
+    /* Productos */
     .container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Más adaptable */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Productos más pequeños */
     }
 
-    .product {
-        padding: 1rem;
+    .product img {
+        height: 150px; /* Reducimos altura de imágenes */
+    }
+
+    .product h2 {
+        font-size: 1.2rem;
+    }
+
+    .product button {
+        padding: 0.6rem 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .cart-icon {
-        width: 40px;
-        height: 40px;
+    /* Header */
+    header h1 {
+        font-size: 1.2rem;
     }
 
-    .cart-svg {
-        width: 18px;
-        height: 18px;
+    header img {
+        width: 50px;
     }
 
-    .cart-count {
-        width: 14px;
-        height: 14px;
-        font-size: 0.6rem;
-    }
-
+    /* Productos */
     .container {
         grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas */
     }
 
-    header h1 {
-        font-size: 1.2rem;
+    .product img {
+        height: 120px;
+    }
+
+    .product h2 {
+        font-size: 1rem;
+    }
+
+    .product button {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.8rem;
     }
 }
